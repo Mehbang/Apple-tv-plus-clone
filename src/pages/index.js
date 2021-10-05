@@ -39,7 +39,7 @@ export default function Home({ videos }) {
   )
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps(context) {
   const url = process.env.ENDPOINT
 
   const graphQLClient = new GraphQLClient(url, {
@@ -89,6 +89,5 @@ export async function getStaticProps() {
     props: {
       videos,
     },
-    revalidate: 1,
   }
 }
