@@ -1,0 +1,23 @@
+.section {
+  padding: 1rem 0 2rem 0;
+  border-bottom: solid rgba(140, 140, 140, 0.3);
+  border-width: 0.2px;
+  overflow-x: scroll;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
+}
+
+.title {
+  margin-top: 1rem;
+}
+
+.box {
+  display: flex;
+  width: fit-content;
+  gap: 1rem;
+}

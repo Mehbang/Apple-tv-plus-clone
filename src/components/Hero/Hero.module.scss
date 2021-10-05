@@ -1,0 +1,82 @@
+@import '../../styles/breakpoints.scss';
+
+.container {
+  position: relative;
+}
+
+.image {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.65) 100%
+    );
+  }
+}
+
+.box {
+  position: absolute;
+  left: 0;
+  bottom: 5px;
+  width: 100%;
+  @include respond(sm) {
+    bottom: 20px;
+  }
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+
+  svg {
+    font-size: 3.7rem;
+  }
+
+  span {
+    font-size: 3.5rem;
+  }
+}
+
+.subscribe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  button {
+    border: none;
+    background: white;
+    padding: 0.5rem 3rem;
+    font-size: var(--fs-sm);
+    border-radius: var(--br-lg);
+    cursor: pointer;
+    @include respond(sm) {
+      padding: 0.75rem 5rem;
+    }
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+
+  p {
+    font-size: var(--fs-xs);
+    color: var(--clr-white-dark);
+    margin-top: 0.3rem;
+  }
+}

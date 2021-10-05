@@ -1,0 +1,81 @@
+.container {
+  position: relative;
+  max-width: 1279px;
+  margin: 0 auto;
+  padding-bottom: 5rem;
+}
+
+.wrapper {
+  position: relative;
+  padding-top: 56.25%;
+}
+
+.player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.tags {
+  padding: 1rem;
+
+  p {
+    letter-spacing: 0.1rem;
+    font-size: var(--fs-xl);
+    background-color: var(--clr-blue);
+    width: fit-content;
+    padding: 0.5rem 1.5rem;
+    box-shadow: var(--shadow-xl);
+    border-radius: var(--br-lg);
+  }
+}
+
+.description {
+  padding: 1rem;
+}
+
+.back {
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 2rem;
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  svg {
+    background-color: white;
+    border-radius: var(--br-full);
+    color: black;
+  }
+}
+
+.favorite {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  background-color: var(--clr-blue);
+  border-radius: var(--br-full);
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  svg {
+    font-size: var(--fs-2xl);
+    cursor: pointer;
+
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+}
